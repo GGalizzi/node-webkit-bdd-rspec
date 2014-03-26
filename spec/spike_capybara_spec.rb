@@ -4,5 +4,6 @@ Capybara.register_driver :remote_browser do |app|
                                  :desired_capabilities => :chrome)
 end
 
+Capybara.run_server = false
 Capybara.default_driver = :remote_browser
 Capybara.javascript_driver = :remote_browser
