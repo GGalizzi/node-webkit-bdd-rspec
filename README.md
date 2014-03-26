@@ -10,7 +10,7 @@ I hope it can be of use to some people.
 + Download [Selenium Server Standalone](http://docs.seleniumhq.org/download/) jar and [Node-Webkit's chromedriver2](https://github.com/rogerwang/node-webkit/wiki/Chromedriver).
 
 + This example applications has the following set-up:
-  + An [app protocol](https://github.com/rogerwang/node-webkit/wiki/App-protocol) set-up, which seems to be needed for rspec visit the app properly, won't work with file protocol.
+  + An [app protocol](https://github.com/rogerwang/node-webkit/wiki/App-protocol) set-up, which seems to be needed for rspec to visit the app properly, won't work with file protocol.
   + The path to the main file inside `test_helper.rb`, selenium seems to break with Node-Webkit when not running a `before(:each) { visit app_main_file }` for all specs.
 
 
@@ -20,9 +20,9 @@ First, place the selenium jar and chromedriver2 in your app's root folder, you w
 
 Then run the following selenium server commands:
 
-`java -jar selenium-server-standalone-2.40.0.jar -role hub -multiWindow -browserSessionReuse`
+`java -jar selenium-server-standalone-VERSION.jar -role hub -multiWindow -browserSessionReuse`
 
-`java -jar selenium-server-standalone-2.40.0.jar -role webdriver -hub http://127.0.0.1:4444/grid/register -port 5555 -Dwebdriver.chrome.driver=./chromedriver2_server`
+`java -jar selenium-server-standalone-VERSION.jar -role webdriver -hub http://127.0.0.1:4444/grid/register -port 5555 -Dwebdriver.chrome.driver=./chromedriver2_server`
 
 Now running `rspec` should open your Node-Webkit application with `chromedriver2_server` which opens the nw executable in the same folder.
 
