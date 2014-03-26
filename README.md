@@ -1,6 +1,6 @@
 ## RSpec-Capybara with Node-Webkit
 
-This is how I managed to use Rspec-Capybara to test Node-Webkit applications, if you know of a better way, please let me know!
+This is how I managed to use Rspec-Capybara to test [Node-Webkit](https://github.com/rogerwang/node-webkit) applications, if you know of a better way, please let me know!
 
 I hope it can be of use to some people.
 
